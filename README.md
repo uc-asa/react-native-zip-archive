@@ -2,6 +2,33 @@
 
 Zip archive utility for react-native
 
+## Manual Installation
+Fos iOS
+
+Open you project in xcode and also open folder node_modules/react-native-zip-archive
+image
+
+Open your build phase of project then goto add link binary with libraries
+image
+image
+
+Clean your project and then build it will work.
+
+Fos android
+
+Within your project android/settings.gradle add these lines in the bottom
+include ':react-native-zip-archive'
+project(':react-native-zip-archive').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-zip-archive/android')
+image
+
+Open MainActivity.java and make changes
+image
+
+Within your project android/app/build.gradle add dependencies.
+compile project(':react-native-zip-archive')
+image
+
+
 ## Installation
 
 ```bash
